@@ -37,7 +37,7 @@ PubSubClient client(espClient);
 
 //Sensors
 const int mq135Pin = 32; 
-MQ135 gasSensor = MQ135(mq135Pin);  // Initialise l'objet MQ135 sur le Pin spécifié    
+MQ135 gasSensor = MQ135(mq135Pin);  // Initialise object MQ135 on pin    
 #define DHTPIN 0     // Digital pin connected to the DHT sensor
 #define DHTTYPE DHT22 
 DHT dht(DHTPIN, DHTTYPE);
@@ -136,7 +136,7 @@ void setup() {
   //end Wifi connect
 
   //Mqtt port
- //client.setServer(mqtt_server, 1884);
+ client.setServer(mqtt_server, 1884);
 
 //Start temperature sensor    
   dht.begin();
@@ -183,11 +183,11 @@ void setup() {
 void loop() {
 
   //Connect to MQTT
-/*
+
 if (!client.connected()){
    mqttconnect();
   }
-*/
+
  //Gaz Values
     float ppm = gasSensor.getPPM();
     float Ethanol = gasSensor.getEthanol();
@@ -203,7 +203,7 @@ if (!client.connected()){
     Serial.println(Acetone);
        
 
-  //client.loop();
+  
 
  //Temperature and Humidity
  
