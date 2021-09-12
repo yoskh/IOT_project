@@ -24,13 +24,13 @@ String CardId = "Yos.k" ;
 
 //MQTT 
 #define mqtt_server "192.168.1.15"
-#define mqtt_host  "DESKTOP-3TRO9B7"
+#define mqtt_host  "DESKTOP-3"
   
 
 //Wifi
  
-const char* ssid     =      "TAL_Gst";                  //  "TOPNET_9EB8";                  // ESP32 and ESP8266 uses 2.4GHZ wifi only  "ooredoo_70E8A8" ; 
-const char* password =         "T@L-Gst$2020";     //  "tyk5ccw5gt";                       //"3MJJJJMF3XCCM" 
+const char* ssid     =      "";                 
+const char* password =         "";                
 WiFiClient espClient;
 PubSubClient client(espClient);
 
